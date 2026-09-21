@@ -52,7 +52,13 @@ h1 { max-width: 760px; font-size: clamp(3rem,6.2vw,5.8rem); line-height: .98; le
 .portrait-wrap { position: relative; max-width: 410px; justify-self: end; }
 .portrait-frame { position: relative; background: var(--accent-soft); padding: 12px; border: 1px solid rgba(61,217,197,.35); }
 .portrait-frame::before { content: ""; position: absolute; inset: -22px 22px 22px -22px; border: 1px solid var(--line); z-index: -1; }
-.portrait-frame img { aspect-ratio: .84; object-fit: cover; object-position: 50% 28%; filter: saturate(.88) contrast(1.03); }
+.portrait-frame img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 25%;
+  filter: saturate(.88) contrast(1.03);
+}
 .status-card { position: absolute; right: -30px; bottom: 28px; display: flex; align-items: center; gap: .8rem; min-width: 245px; padding: .9rem 1rem; background: #f8fbfc; color: var(--paper-text); box-shadow: 0 18px 60px rgba(0,0,0,.35); }
 .status-card strong, .status-card small { display: block; }
 .status-card strong { font-size: .85rem; }
